@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class NumberGame {
 
 	public static void main(String[] args) {
-		System.out.println("TEAM DATA PIRATES");
+		System.out.println("TEAM DATA-PIRATES");
 		Scanner in=new Scanner(System.in);
 		
 		int[] x =new int[3] ;
