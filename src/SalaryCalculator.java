@@ -12,7 +12,7 @@ public class SalaryCalculator {
 			flexiblePay = (basePay * 50)/100;
 			//System.out.println(flexiblePay);
 		}
-		if(basePay > 50000 && basePay <+75000)
+		if(basePay > 50000 && basePay <=75000)
 		{
 			flexiblePay = (basePay * 60)/100;
 			//System.out.println(flexiblePay);
