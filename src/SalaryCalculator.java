@@ -8,7 +8,7 @@ public class SalaryCalculator {
 		
 		double flexpay=0,bonus=0,tax=0;
 
-		//flexible pay
+		//flexible Pay
 		if(basePay<=50000) {
 			flexpay=(0.5)*basePay;
 		}
