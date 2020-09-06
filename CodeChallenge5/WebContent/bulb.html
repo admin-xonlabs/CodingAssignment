@@ -4,13 +4,39 @@
 <meta charset="ISO-8859-1">
 <title>Bulb</title>
 </head>
-<body>
-<hr/>
-<input type=button value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type=button value='Turn Off' />
-<hr/>
-<img src='off.png' style='width: 200px;' />
-<img src='on.png' style='width: 200px;' />
+<script type="text/javascript">
+	function turn_on_bulb() {
+  document.getElementById("turn_off_png").style.visibility = "hidden";
+  document.getElementById("turn_on_png").style.visibility = "visible";
+}
+function turn_off_bulb() {
+  document.getElementById("turn_on_png").style.visibility = "hidden";
+  document.getElementById("turn_off_png").style.visibility = "visible";
+}
+</script>
+<style type="text/css">
+	.under {
+  position: absolute;
+  padding: 70px;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
 
+.over {
+  position: absolute;
+  padding: 70px;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+</style>
+<body onload="turn_off_bulb()">
+<hr/>
+<input type=button onclick="turn_on_bulb()" id="turn_on_button" value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button onclick="turn_off_bulb()" id="turn_off_button"value='Turn Off' />
+<hr/>
+<img id="turn_off_png" class="over" src='off.png' style='width: 200px;' />
+<img id="turn_on_png" class="under" src='on.png' style='width: 200px;' />
 </body>
 </html>
