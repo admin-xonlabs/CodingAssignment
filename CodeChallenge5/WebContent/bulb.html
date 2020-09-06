@@ -5,12 +5,27 @@
 <title>Bulb</title>
 </head>
 <body>
+<script>
+function bulb(sar)
+{
+	var img;
+	if(sar==1)
+		{
+			img = 'on.png';
+		}
+	else
+		{
+			img = 'off.png';
+		}
+	document.getElementById('bulb').src=img;
+}
+</script>
 <hr/>
-<input type=button value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type=button value='Turn Off' />
+<input type=button value='Turn On' onclick = "bulb(1)"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value='Turn Off' onclick = "bulb(0)" />
 <hr/>
-<img src='off.png' style='width: 200px;' />
-<img src='on.png' style='width: 200px;' />
+<img id='bulb' src='off.png' style='width: 200px;' />
+
 
 </body>
 </html>
