@@ -3,14 +3,25 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Bulb</title>
+<script type="text/javascript">
+	function bulb(onoff){
+		var img=document.querySelector("img");
+		if(onoff == 1){
+			img.src="on.png";
+		}
+		if(onoff == 0){
+			img.src="off.png";
+		}
+	}
+</script>
 </head>
-<body>
+<body onload="document.getElementById('bulbon').style.visibility = 'hidden'">
 <hr/>
-<input type=button value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type=button value='Turn Off' />
+<input type=button value='Turn On' onclick="bulb(1)" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value='Turn Off' onclick="bulb(0)" />
 <hr/>
 <img src='off.png' style='width: 200px;' />
-<img src='on.png' style='width: 200px;' />
+<img id="bulbon" src='on.png' style='width: 200px;' />
 
 </body>
 </html>
