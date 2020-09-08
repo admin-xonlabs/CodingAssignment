@@ -6,11 +6,23 @@
 </head>
 <body>
 <hr/>
-<input type=button value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type=button value='Turn Off' />
+<input type=button value='Turn On' onclick="light(1)"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value='Turn Off' onclick="light(0)">
 <hr/>
-<img src='off.png' style='width: 200px;' />
-<img src='on.png' style='width: 200px;' />
+<script>
+function light(sw)
+{
+	var pic;
+	if(sw==0){
+		pic = "off.png"
+		}
+	else{
+		pic = "on.png"
+	    }
+	document.getElementById('myimage').src=pic;
+	}
+</script>
+<img id="myimage" src='off.png' style='width: 200px;' />
 
 </body>
 </html>
