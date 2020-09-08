@@ -4,13 +4,21 @@
 <meta charset="ISO-8859-1">
 <title>Bulb</title>
 </head>
+<script>
+function bulbOnOff(light){
+	var bulb;
+	if(light==0){
+		bulb='off.png';
+	}else bulb='on.png';
+	document.getElementById('OnOff').src=bulb;
+}
+</script>
 <body>
 <hr/>
-<input type=button value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type=button value='Turn Off' />
+<input type=button onclick="bulbOnOff(1);" value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button onclick="bulbOnOff(0);" value='Turn Off' />
 <hr/>
-<img src='off.png' style='width: 200px;' />
-<img src='on.png' style='width: 200px;' />
+<img src='off.png' id="OnOff" style='width: 200px;' />
 
 </body>
 </html>
