@@ -5,12 +5,13 @@
 <title>Bulb</title>
 </head>
 <body>
+  <marquee behavior=”scroll” direction=”left” height=”36″>XONBIE INTERN's</marquee>
+<div id="img">
 <hr/>
-<input type=button value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type=button value='Turn Off' />
+<input type=button onclick=document.getElementById('img1').src='on.png' value="Turn On"/>
+<input type=button onclick=document.getElementById('img1').src='off.png' value="Turn off"/>
 <hr/>
-<img src='off.png' style='width: 200px;' />
-<img src='on.png' style='width: 200px;' />
-
+<img id="img1" src='off.png' style='width: 300px;' />
+</div>
 </body>
 </html>
