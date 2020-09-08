@@ -3,14 +3,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Bulb</title>
-</head>
-<body>
-<hr/>
-<input type=button value='Turn On' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type=button value='Turn Off' />
-<hr/>
-<img src='off.png' style='width: 200px;' />
-<img src='on.png' style='width: 200px;' />
 
+</head>
+<body  onload="document.getElementById('on_button').style.visibility = 'hidden'">
+<hr/>
+<input type=button value='Turn On'  onclick="bulbon()" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value='Turn Off' onclick="bulboff()" />
+<hr/>
+<img id="offbutton" src='off.png' style="width: 200px;" />
+<img id="onbutton" src='on.png' style="width: 200px;display: none;" />
+<script type="text/javascript">
+function bulbon(){
+	document.getElementById("offbutton").style.display = "none";
+	document.getElementById("onbutton").style.display = "inline";
+}
+function bulboff(){
+	document.getElementById("offbutton").style.display = "inline";
+	document.getElementById("onbutton").style.display = "none";
+}
+</script>
 </body>
 </html>
